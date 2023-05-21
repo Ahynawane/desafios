@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudança de Preço</title>
+</head>
+<body>
+    <h2>Preço antes, preço depois</h2>
+    <button onclick="verificar()">Verificar</button>
+    <section id="res">
+        Clique no botão acima para analisar a mudança de preço.
+    </section>
+
+    <script>
+        function verificar(){
+            let res = document.getElementById("res")
+            let ant = Number(window.prompt("Qual o preço anterior do produto?"))
+            let atu = Number(window.prompt("Qual o preço atual do produto?"))
+
+            var mudou1 = atu - ant
+            var mudou2 = ant - atu
+            var varia1 = (atu - ant) / ant * 100
+            var varia2 = (ant - atu) / ant * 100
+
+
+
+           
+
+           if(atu > ant){
+            document.write(`<h2>Analisando os valores informados</h2>. <br>
+                O produto custava <Strong>R$${ant},00</Strong> e agora custa <Strong>R$${atu},00</Strong> <br>
+                Hoje o produto está mais caro.<br>
+                O preço subiu <Strong>R$${mudou1},00</Strong> em relação ao preço anterior.<br>
+                Uma variação de <Strong>${varia1}%</Strong> pra cima.`);
+        }else{
+            document.write(`<h2>Analisando os valores informados</h2>. <br>
+                O produto custava <Strong>R$${ant},00</Strong> e agora custa <Strong>R$${atu},00</Strong> <br>
+                Hoje o produto está mais barato.<br>
+                O preço caiu <Strong>R$${mudou2},00</Strong> em relação ao preço anterior.<br>
+                Uma variação de <Strong>${varia2}%</Strong> pra baixo.`);
+        }
+    }
+    </script>
+</body>
+</html>

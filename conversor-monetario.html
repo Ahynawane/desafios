@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> US$</title>
+</head>
+<body>
+    <h2>Conversor R$ -> US$</h2>
+    <button onclick="converter()">Converter</button>
+    <section id="res">Clique no botão acima para iniciar</section>
+
+    <script>
+        let cota = Number.parseFloat(window.prompt("Antes de mais nada, quanto está a cotação do dolar agora?"))
+        function converter(){
+            let R$ = Number.parseFloat(window.prompt("Quantos R$ você tem na certeira?"))
+
+            let dolar = R$ / cota
+
+            let res = document.getElementById("res")
+            res.innerHTML=`<h2>Convertendo R$ em US$</h2><br>
+            O valor <strong>R$${R$},00</strong> convertido em Dólar é <strong>US$${dolar},00</strong>`
+        }
+    </script>
+</body>
+</html>

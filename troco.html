@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+</head>
+
+<body>
+    <h2>Calculando o Troco</h2>
+    <p>Clique no botão para iniciar</p>
+    <button onclick="botao()">Comprar produto</button>
+    <section id="resultado">
+       
+    </section>
+    <script>
+        function botao(){
+            let p = window.prompt(`Que produto vcoê está comprando?`)
+           
+            let val = window.prompt(`Qual o valor do produto?`)
+            let valp = window.prompt(`Qual o valor que você pagou?`)
+            let troco = window.prompt(`O produto que vcoê comprou foi ${p}, o valor 
+            que ele custa é ${val} e você pagou ${valp}. Portanto, seu troco
+            é ${valp -val }.`)
+
+          
+              produto.innerHTML = `<p>O valor dele é <strong> ${val} </strong>!
+              `
+        }
+    </script>
+
+    
+</body>
+
+</html>

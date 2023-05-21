@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação do aluno</title>
+</head>
+
+<body>
+    <h2>Situação do aluno</h2>
+    <button onclick="avaliar()">Entrar com as notas</button>
+    <div>
+        <section id="resposta"></section>
+
+
+        <script>
+            function avaliar() {
+                let nome = window.prompt(`qual é o nome do aluno?`)
+                let nota = Number(window.prompt(`qual é a primeira nota de ${nome}?`))
+                let nota2 = Number(window.prompt(`qual é a segunda nota de ${nome}?`))
+                var md = (nota + nota2) / 2
+                let res = document.getElementById("resposta")
+
+
+                if (md >= 6.0) {
+                    document.write(`<h2>Analisando a situação de ${nome}</h2>
+       Com as notas ${nota} e ${nota2}, a média é ${md}. <br>
+       Com média acima de 6.0, o aluno está APROVADO.`); 
+                } else if (md >= 3.0 && md <= 5.9) {
+                    document.write(`<h2>Analisando a situação de ${nome}</h2>
+       Com as notas ${nota} e ${nota2}, a média é ${md}.<br>
+       Com média entre 3.0 e 6.0, o aluno está em RECUPERAÇÃO`); 
+                } else if (md < 3.0) {
+                    document.write(`<h2>Analisando a situação de ${nome}</h2>
+       Com as notas ${nota} e ${nota2}, a média é ${md}.<br>
+       Com média abaixo de 3.0, o aluno está REPROVADO`);
+
+
+                }
+            }
+        </script>
+</body>
+
+</html>

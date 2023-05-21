@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+</head>
+
+<body>
+    <h2>Antes e Depois</h2>
+    <p>Clique no botão para iniciar</p>
+    <button onclick="botao()">Antecessor e Sucessor</button>
+    <section id="resultado">
+        <p>Aqui vai aparecer o resultado..</p>
+    </section>
+    <script>
+        function botao(){
+            let num = Number(window.prompt(`Digite um número inteiro qualquer`))
+            let res = window.document.getElementById(`resultado`)
+            var um = Number(1)
+            res.innerHTML = `<p>O número que você digitou é <strong> ${num} </strong>!
+                e o antecesor dele é <strong>${num - 1}</strong>, e o sucessor é <strong>${num + um}</strong>`
+        }
+    </script>
+
+    
+</body>
+
+</html>

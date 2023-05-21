@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula de Bhaskara</title>
+</head>
+<body>
+    <h2>Resolvendo Bhaskara</h2>
+    <button onclick="calcular()">Calcular</button>
+    <section id="res">Considerando uma equação no formato <strong>ax² + bx + c = 0</strong>, aperte
+    o botão acima para calcular o valor de <strong>Delta</strong></section>
+
+    <script>
+        function calcular(){
+            let a = Number(window.prompt("Qual é o valor de a?"))
+            let b = Number(window.prompt("Qual é o valor de b?"))
+            let c = Number(window.prompt("Qual é o valor de c?"))
+
+            var delta = (b*b) -(4*a*c)
+            
+            if (delta < 0) {
+                    var Delta = 0
+                    var R = "Não possui raízes reais"
+                    document.write(`<h3>Resolvendo Bhaskara</h3><br>
+                A equação atual é <strong>${a}x² + ${b}x + ${c} = 0</strong><br>
+                O cálculo realizado será <strong> Delta = ${b}² - 4.${a}.${c}</strong><br>
+                O valor calculado foi <strong>Delta = ${Delta}</strong><br>
+                <strong>${R}</strong>`); 
+                } else if (delta == 0) {
+                    Del = "Delta = 0"
+                    var raiz = -b / (2*a)
+                    document.write(`<h3>Resolvendo Bhaskara</h3><br>
+                A equação atual é <strong>${a}x² + ${b}x + ${c} = 0</strong><br>
+                O cálculo realizado será <strong> Delta = ${b}² - 4.${a}.${c}</strong><br>
+                O valor calculado foi <strong>${Del}</strong><br>
+                Com a raiz <strong>${raiz}</strong>`); 
+                } else if (delta > 0 ) {
+                    var Delt = (b*b) -(4*a*c)
+                    var raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    var raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    document.write(`<h3>Resolvendo Bhaskara</h3><br>
+                A equação atual é <strong>${a}x² + ${b}x + ${c} = 0</strong><br>
+                O cálculo realizado será <strong> Delta = ${b}² - 4.${a}.${c}</strong><br>
+                O valor calculado foi <strong>Delta = ${Delt}</strong><br>
+                E Raízes = <strong> ${raiz1} e ${raiz2}</strong>`);
+
+
+                }
+
+                
+              
+
+        }
+    </script>
+</body>
+</html>

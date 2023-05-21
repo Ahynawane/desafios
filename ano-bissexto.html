@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+</head>
+
+<body>
+    <h1>Ano Bissexto</h1>
+    <button onclick="verificar()">Verificar</button>
+    <section id="res">Clique no botão para verificar</section>
+
+
+    <script>
+        function verificar() {
+            let ano = Number(window.prompt(`Qual é o ano que você quer verificar?`))
+            
+
+            if ((ano % 4 == 0) ) {
+                
+                document.write(`<h2>Analisando o ano de ${ano}...</h2><br>
+                O ano de ${ano} é bissexto`)
+            } else {
+                document.write(`<h2>Analisando o ano de ${ano}...</h2><br>
+                 O ano de ${ano} não é bissexto`)
+            }
+        }
+
+    </script>
+</body>
+</body>
+
+</html>

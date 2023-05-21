@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+</head>
+<body>
+    <h2>Conersor de Temperaturas</h2>
+    <button onclick="converter()">Converter</button>
+    <section id="res">Clique no botão acima para iniciar</section>
+
+    <script>
+        function converter(){
+            let cel = Number.parseFloat(window.prompt("Digite uma temperatura em °C (Celsius)"))
+
+            var far = (cel * 1.8) + 32
+            var kel = (cel + 273.15)
+
+            let res = document.getElementById("res")
+
+            res.innerHTML = `<h3>A temperatura de ${cel}°C corresponde a...</h3><br>
+            ${kel}°K (Kelvin)<br>
+            ${far}°F (Fahrenheit)`
+        }
+    </script>
+</body>
+</html>
